@@ -1,0 +1,163 @@
+*{margin: 0; padding: 0;}
+#loadBar{
+  width: 180px;
+  height: 65px;
+  background-color: #ff8c00;
+  margin: 15%;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+#road{
+  width: 175px;
+  height: 60px;
+  background-color: white;
+}
+#box{
+  background-color: #ff8c00;
+  width: 45px;
+  height: 65px;
+  animation: load 2s infinite;
+}
+@keyframes load {
+  0%{
+  transform: translate(0px,0);
+  }
+  10%{
+    transform:  translate(15px,0);
+  }
+  20%{
+    transform: translate(30px,0);
+  }
+  30%{
+    transform:  translate(45px,0);
+  }
+  40%{
+    transform:  translate(60px,0);
+  }
+  50%{
+    transform:  translate(75px,0);
+  }
+  60%{
+    transform:  translate(90px,0);
+  }
+  70%{
+    transform:  translate(110px,0);
+  }
+  80%{
+    transform:  translate(115px,0);
+  }
+  90%{
+    transform:  translate(120px,0);
+  }
+  100%{
+    transform:  translate(130px,0);
+  }
+}
+#heart{
+  content:url(/source/favorites.png);
+  width: 150px;
+  height: 150px;
+  margin-left: 15%;
+  transition: transform 0.3s ease-in-out;
+  filter: grayscale(100%);
+}
+#heart:hover {
+  transform: scale(2); /* Увеличьте размер при наведении */
+  filter: grayscale(0%);
+}
+/*task3*/
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 80px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  position: relative;
+  animation: slideIn 2s ease-in-out forwards; /* Анимация выезда */
+}
+
+
+
+#icon1 {
+  transform: rotate(-60deg) translateY(-15px);
+  animation: slideIn1 2s ease-in-out forwards 0.5s; /* Анимация для первой иконки с задержкой 0.5 секунды */
+}
+
+#icon2 {
+  transform: rotate(-20deg) translateY(-50px);
+  animation: slideIn2 2s ease-in-out forwards 1s; /* Анимация для второй иконки с задержкой 1 секунда */
+}
+
+#icon3 {
+  transform: rotate(20deg) translateY(-50px) translateX(-10px);
+  animation: slideIn3 2s ease-in-out forwards 1.5s; /* Анимация для третьей иконки с задержкой 1.5 секунды */
+}
+
+#icon4 {
+  transform: rotate(60deg) translateY(-15px);
+  animation: slideIn4 2s ease-in-out forwards 2s; /* Анимация для четвертой иконки с задержкой 2 секунды */
+}
+
+#icon5 {
+  animation: slideIn5 2s ease-in-out forwards 2.5s; /* Анимация для пятой иконки с задержкой 2.5 секунды */
+}
+
+@keyframes slideIn1 {
+  from {
+    transform: translateY(100px) rotate(-60deg) translateY(-15px);
+  }
+  to {
+    transform: rotate(-60deg) translateY(-15px);
+  }
+}
+
+@keyframes slideIn2 {
+  from {
+    transform: translateY(100px) rotate(-20deg) translateY(-50px);
+  }
+  to {
+    transform: rotate(-20deg) translateY(-50px);
+  }
+}
+
+@keyframes slideIn3 {
+  from {
+    transform: translateY(100px) rotate(20deg) translateY(-50px) translateX(-10px);
+  }
+  to {
+    transform: rotate(20deg) translateY(-50px) translateX(-10px);
+  }
+}
+
+@keyframes slideIn4 {
+  from {
+    transform: translateY(100px) rotate(60deg) translateY(-15px);
+  }
+  to {
+    transform: rotate(60deg) translateY(-15px);
+  }
+}
+
+@keyframes slideIn5 {
+  from {
+    transform: translateY(100px) translateY(-125px) rotate(90deg);
+  }
+  to {
+    transform: translateY(-1px) rotate(90deg);
+  }
+}
+
+.icon img {
+  width: 50px;
+  height: 50px;
+}

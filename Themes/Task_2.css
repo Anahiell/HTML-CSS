@@ -1,0 +1,26 @@
+.task2 {
+    margin: 50px;
+    list-style: none;
+  }
+.task2 li{
+    background-color:#a5ccdb;
+    margin: 5px;
+}
+.task2 li::before {
+    content: url('/source/unchecked_16.png');
+    margin-right: 10px;
+  }
+  
+  .task2 li.checked::before {
+    content: url('/source/checked_16.png');
+  }
+
+  .cross ::after {
+    content: '×';
+    color: red;
+  }
+
+  .task2 .checked {
+    text-decoration: line-through;
+    background-color: white;
+  }
