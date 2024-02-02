@@ -1,26 +1,118 @@
-.task2 {
-    margin: 50px;
-    list-style: none;
-  }
-.task2 li{
-    background-color:#a5ccdb;
-    margin: 5px;
+body {
+  display: flex;
+  height: 100%;
 }
-.task2 li::before {
-    content: url('/source/unchecked_16.png');
-    margin-right: 10px;
-  }
+.conteiner{
+  display: flex;
+background-color: #dbdbdb;
+ flex-direction: row;
+}
+p
+{
+ font-weight: bolder;
+}
+.conteiner.LMenu {
+  display: flex;
+  flex-direction: column;
+  color: antiquewhite;
+  text-transform: uppercase;
+  font-size: 20px;
+  background-color: #333333;
+  border-bottom: 2px solid #2d2d2d;
+  min-width: 200px; 
+  flex: 0 0 auto;
   
-  .task2 li.checked::before {
-    content: url('/source/checked_16.png');
+}
+.left
+{
+border-bottom: 2px solid #2d2d2d ;
+padding: 25px;
+}
+.left.Item1 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*info*/
+.conteiner.Inform
+{
+  font-size: large;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.Info
+{
+  margin: 15px;
+  background-color: #ffffff;
+}
+.Info.Item1
+{
+  width: 100%;
+  background-color:#dbdbdb;
+}
+.Info.Item2,.Info.Item3
+{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 50px;
+}
+.Info.Item2 img, .Info.Item3 img
+{
+  max-width: 100%;
+  max-height: 100%;
+}
+.Info.Item4  {
+  width: 100%;
+}
+.Info.Item4 table {
+  width: 100%; /* Заполнить доступное пространство внутри .InfoItem4 */
+  margin: 15px;
+}
+.Info.Item4 th, .Item4 td {
+  padding: 15px; /* Внутренний отступ в ячейках */
+  text-align: left; /* Выравнивание текста в ячейках */
+}
+@media screen and (max-width: 600px) {
+  .conteiner {
+    flex-direction: column;
   }
 
-  .cross ::after {
-    content: '×';
-    color: red;
+.Info
+{
+  margin: 15px;
+}
+  .conteiner.LMenu {
+    min-height: auto;
+    min-width: auto;
   }
+  .left.Item1
+{
+  justify-content: center;
+}
+.left.Item1{
+display: flex;
+justify-content: center;
+height: auto;
+width: auto;
+}
+.Info.Item2,
+.Info.Item3 {
+  flex-basis: 100%; /* Устанавливаем ширину 100%, чтобы они были на разных линиях */
+}
 
-  .task2 .checked {
-    text-decoration: line-through;
-    background-color: white;
+  .left.Item1 img{
+    max-width: 80px;
+    max-height: 80px;
   }
+  .left
+  {
+    padding: 5px 0px 5px 40px ;
+  }
+  .Info.Item2 img, .Info.Item3 img
+{
+  max-width:90%;
+  max-height: 90%;
+}
+}
