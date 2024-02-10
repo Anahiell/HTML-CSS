@@ -1,19 +1,125 @@
-*
-{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.back
-{
-  font-size: 30px;
-  border-radius: 50%;
+
+.sidebar {
+  background-color: #f8f9fa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  padding-top: 20px;
+  overflow-x: hidden;
+  border-right: 2px solid gray;
+  z-index: 1000; 
+}
+body{
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+.content {
+ 
+  flex: 1;
+  padding: 20px;
+  z-index: 1; /* Установка z-index для контента, чтобы он оставался под меню */
+}
+.card{
+border-right: 2px solid grey;
+border-bottom: 2px solid grey ;
+}
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-link {
+  color: black;
+  background-color: #f6f6f6; /* Цвет текста для неактивных пунктов меню */
+}
+
+.nav-link.active {
+  background-color: #c32055;  
+  color: black;
+  /* Розовый цвет для активного пункта меню */
+}
+.card-body div img {
   background-color: green;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+.card-body div {
+ position: relative;
+ transform: translateY(-25px) ;
+}
+.graf1, .graf2, .graf3 {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 800px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: -240px; /* Позиция за пределами экрана */
+    transition: all 0.3s;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    border-right: none;
+  }
+
+  .sidebar.active {
+    left: 0; /* Показать боковое меню */
+  }
+
+  .content {
+    margin-left: 0;
+    padding-top: 60px; /* Учитываем высоту бокового меню */
+  }
+
+  .nav-link.active {
+    display: inline;
+  }
+
+  .burger-menu {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+  }
+
+  .collapsed-sidebar {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .collapsed-sidebar .nav-link.active {
+    display: inline;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .collapsed-sidebar .sidebar {
+    display: block;
+  }
+
+  .collapsed-sidebar .content {
+    margin-left: 0;
+  }
 }
