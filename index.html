@@ -3,248 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./Themes/main.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var activator = document.getElementById("activator");
-        var box = document.getElementById("box");
-        var boxclose = document.getElementById("boxclose");
-        var menuItems = document.querySelectorAll(".menu_box_list ul li a");
 
-        // Обработчик клика по активатору и кнопке закрытия
-        activator.addEventListener("click", toggleMenu);
-        boxclose.addEventListener("click", toggleMenu);
-
-        // Обработчик клика по пунктам меню
-        menuItems.forEach(function(item) {
-            item.addEventListener("click", toggleMenu);
-        });
-
-        // Функция переключения состояния меню
-        function toggleMenu() {
-            if (box.style.top === "0px") {
-                box.style.top = "-700px"; // Закрыть меню
-            } else {
-                box.style.top = "0px"; // Открыть меню
-            }
-        }
-    });
-</script>
-<div class="menu"> 
-    <a href="#" id="activator"><img src="./source/menu.png" alt="menu" /></a><b> Dashboard</b>
-    <div class="box" id="box">
-        <div class="box_content">
-            <div class="menu_box_list">
-                <ul>
-                    <li class="active"><a href="#">Dashboard</a></li>
-                    <li><a href="./User_P.html">User Profile</a></li>
-                    <li><a href="#">Maps</a></li>
-                    <li><a href="#">Notifications</a></li>
-                    <li><a href="#">Support</a></li>
-                    <div class="clearfix"></div>
-                </ul>
-            </div>
-            <a class="boxclose" id="boxclose"><img src="./source/remove.png" alt="" /></a>
-        </div> 
-    </div>
-</div>
 <body>
-        <!-- Sidebar -->
-        <nav class="sidebar">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="./index.html"><img src="./source/dashboard_white.svg" alt="dashb">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./User_P.html"><img src="./source/account_gray.svg" alt="account">User Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="./source/map_gray.svg" alt="map">Maps</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="./source/notify_gray.svg" alt="notify">Notifications</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="./source/support_gray.svg" alt="Support">Support</a>
-                </li>
-            </ul>
-        </nav>
-    
-        <!-- Main Content -->
-        <div class="container mt-3">
-            <!-- Your content here -->
-            <div class="row">
-                <!-- First row with 4 blocks -->
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="b1"><img src="./source/data_white.svg" alt=""></div>
-
-                            Block 1
-                            <hr>
-                            <p><img src="./source/alert.png" alt="alert"> Some alert</p>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <h3>Ввод числа в степень</h3>
+                    <input type="number" id="base" placeholder="Введите основание">
+                    <input type="number" id="exponent" placeholder="Введите степень">
+                    <button onclick="calculatePower()">Вычислить</button>
+                    <p id="powerResult"></p>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="b2"><img src="./source/shop_white.svg" alt=""></div>
-
-                            Block 2
-                            <hr>
-                            <p><img src="./source/calendar.png" alt="calendar">Some calendar</p>
-
-                        </div>
-                    </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <h3>Поиск общего делителя</h3>
+                    <input type="number" id="number1" placeholder="Введите первое число">
+                    <input type="number" id="number2" placeholder="Введите второе число">
+                    <button onclick="calculateGCD()">Вычислить</button>
+                    <p id="gcdResult"></p>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="b3"><img src="./source/tag_white.svg" alt=""></div>
-
-                            Block 3
-                            <hr>
-                            <p><img src="./source/down.png" alt="down">Some down</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="b4"><img src="./source/paperplane_white.svg" alt=""></div>
-
-                            Block 4
-                            <hr>
-                            <p><img src="./source/time.png" alt="time">Some time</p>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Second row with 3 graphs -->
-                <div class="col-lg-4  col-md-4 col-sm-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="g1"><img src="./source/graphics.svg" alt="" class="graf1"></div>
-                            Graph 1
-                            <hr>
-                            <p><img src="./source/time.png" alt="time">Some time</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4  col-md-4 col-sm-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="g2"><img src="./source/graphics.svg" alt="" class="graf2"></div>
-
-                            Graph 2
-                            <hr>
-                            <p><img src="./source/time.png" alt="time">Some time</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4  col-md-4 col-sm-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="g3"><img src="./source/graphics.svg" alt="" class="graf3"></div>
-
-                            Graph 3
-                            <hr>
-                            <p><img src="./source/time.png" alt="time">Some time</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-body tasks">
-                            <div class="task-header">
-                                 Tasks:
-                                 <button type="button" class="btn btn-primary"><img src="./source/bug.svg" alt="bug">Bugs</button>
-                                 <button type="button" class="btn btn-primary"><img src="./source/web.svg" alt="web">Website</button>
-                                 <button type="button" class="btn btn-primary"><img src="./source/cloud.svg" alt="cloud">Server</button>   
-                            </div>
-                            <div class="task-list mt-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="task1">
-                                    <label class="form-check-label" for="task1">
-                                        Task 1
-                                    </label>
-                                        <img src="./source/edit.png" alt="Edit">
-                                        <img src="./source/remove.png" alt="Remove">
-                                   
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="task2">
-                                    <label class="form-check-label" for="task2">
-                                        Task 2
-                                    </label>
-                                        <img src="./source/edit.png" alt="Edit">
-                                        <img src="./source/remove.png" alt="Remove">
-                                   
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="task3">
-                                    <label class="form-check-label" for="task3">
-                                        Task 3
-                                    </label>
-                                        <img src="./source/edit.png" alt="Edit">
-                                        <img src="./source/remove.png" alt="Remove">
-                                    
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="empl-header">Employees stats</div>
-                            <table class="table mt-3">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Salary</th>
-                                    <th>Country</th>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Dacota</td>
-                                    <td>36.123</td>
-                                    <td>Japan</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Dacota</td>
-                                    <td>36.123</td>
-                                    <td>Japan</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Dacota</td>
-                                    <td>36.123</td>
-                                    <td>Japan</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
-    
-        <!-- Footer -->
-        <footer class="footer mt-auto py-3 bg-light">
-            <div class="container">
-                <hr>
-                <p>&copy; 2024 my Company</p>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <h3>Поиск максимальной цифры</h3>
+                    <input type="number" id="number" placeholder="Введите число">
+                    <button onclick="findMaxDigit()">Вычислить</button>
+                    <p id="maxDigitResult"></p>
+                </div>
             </div>
-        </footer>
+            <div class="col">
+                <div class="card">
+                    <h3>Проверка на простое число</h3>
+                    <input type="number" id="primeNumber" placeholder="Введите число">
+                    <button onclick="checkPrime()">Проверить</button>
+                    <p id="primeResult"></p>
+                </div>
+            </div>
+        </div>    
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <h3>Вывод всех множителей</h3>
+                    <input type="number" id="factorNumber" placeholder="Введите число">
+                    <button onclick="findFactors()">Вычислить</button>
+                    <p id="factorResult"></p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <h3>Число Фибоначчи по порядковому номеру</h3>
+                    <input type="number" id="fibonacciNumber" placeholder="Введите порядковый номер">
+                    <button onclick="calculateFibonacci()">Вычислить</button>
+                    <p id="fibonacciResult"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
 </html>
