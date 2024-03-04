@@ -4,68 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Themes/main.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <h3>Ввод числа в степень</h3>
-                    <input type="number" id="base" placeholder="Введите основание">
-                    <input type="number" id="exponent" placeholder="Введите степень">
-                    <button onclick="calculatePower()">Вычислить</button>
-                    <p id="powerResult"></p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <h3>Поиск общего делителя</h3>
-                    <input type="number" id="number1" placeholder="Введите первое число">
-                    <input type="number" id="number2" placeholder="Введите второе число">
-                    <button onclick="calculateGCD()">Вычислить</button>
-                    <p id="gcdResult"></p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <h3>Поиск максимальной цифры</h3>
-                    <input type="number" id="number" placeholder="Введите число">
-                    <button onclick="findMaxDigit()">Вычислить</button>
-                    <p id="maxDigitResult"></p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <h3>Проверка на простое число</h3>
-                    <input type="number" id="primeNumber" placeholder="Введите число">
-                    <button onclick="checkPrime()">Проверить</button>
-                    <p id="primeResult"></p>
-                </div>
-            </div>
-        </div>    
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <h3>Вывод всех множителей</h3>
-                    <input type="number" id="factorNumber" placeholder="Введите число">
-                    <button onclick="findFactors()">Вычислить</button>
-                    <p id="factorResult"></p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <h3>Число Фибоначчи по порядковому номеру</h3>
-                    <input type="number" id="fibonacciNumber" placeholder="Введите порядковый номер">
-                    <button onclick="calculateFibonacci()">Вычислить</button>
-                    <p id="fibonacciResult"></p>
-                </div>
-            </div>
-        </div>
+    <div>
+    <p>Enter your name</p>
+    <input type="text" id="usernameInput">
     </div>
+    <br>    
+    <!-- Кнопка для открытия модального окна -->
+    <button id="openModalBtn">Открыть Модальное</button>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+      <!-- Содержимое модального окна -->
+      <div class="modal-content">
+        <span class="close">&times;</span> <!-- Кнопка Закрыть -->
+        <p>Текст модального окна.</p>
+      </div>
+    </div>
+    <div class="traffic-light">
+        <div class="light red"></div>
+        <div class="light yellow"></div>
+        <div class="light green"></div>
+      </div>
+      <button id="toggleBtn">Next</button>
+
+      <h2>Список книг</h2>
+
+<ul class="book-list">
+  <li class="book">Книга 1</li>
+  <li class="book">Книга 2</li>
+  <li class="book">Книга 3</li>
+  <li class="book">Книга 4</li>
+</ul>
     <script src="./index.js"></script>
 </body>
 </html>
