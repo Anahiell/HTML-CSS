@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    #resault
+    {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 25px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <div>
+        <input type="checkbox" id="boldIn"> <label for="boldIn">Bold</label>
+        <input type="checkbox" id="underIn"><label for="underIn">Underline</label>
+        <input type="checkbox" id="italIn"><label for="italIn">Italics</label>
+        
+            <input type="radio" id="lefIn" name="alignment" value="left"> <label for="lefIn">Left</label>
+            <input type="radio" id="rightIn" name="alignment" value="right"> <label for="rightIn">Right</label>
+            <input type="radio" id="justiIn" name="alignment" value="justify"> <label for="justiIn">Justify</label>
+        </div>
+        <textarea name="proto" id="proto" cols="60" rows="10">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, labore.
+        </textarea><br>
+        <button id="showbtn">Show the Text</button>
+    </div>
+    <div class = "col-6" id="resault">
+        <b>Result:</b><br>
+            <div  id="clearT" ></div>
+    </div>
+    <script src="./task3js.js"></script>
+</body>
+</html>
